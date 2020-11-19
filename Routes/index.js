@@ -1,15 +1,16 @@
 const express = require('express');
+
+//Importar las rutas
 const router = express.Router();
+
+//Importar el controlador
+const proyectosController = require('../Controllers/proyectosController');
 
 module.exports = function () {
   //Ruta a Home
-  router.get('/', (request, response) => {
-    response.send('Home');
-  });
+  router.get('/', proyectosController.proyectosHome);
   //Ruta a Nosotros
-  router.get('/nosotros', (request, response) => {
-    response.send('Nosotros');
-  });
+  router.get('/nosotros', proyectosController.nosotros);
 
   return router;
 };

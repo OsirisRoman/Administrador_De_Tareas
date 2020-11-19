@@ -1,2 +1,8 @@
-h1 Hola desde la vista
-p Si ves este mensaje es porque se pudo habilitar PUG template engine
+extends layout
+
+block contenido
+    h1 Hola desde la vista
+    p Si ves este mensaje es porque se pudo habilitar PUG template engine
+
+block despuesDelContenido
+    p Los blocks son pedazos de código que pueden ser utilizados o no en las diferentes vistas sin causar errores por no ser usados
